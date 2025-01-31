@@ -11,6 +11,11 @@ public class Task6 {
         System.out.println (firstVari);
         System.out.println (secondVari);
 
+        /*
+        currently,
+        firstVari = 10;
+        secondVari = 24;
+         */
 
 
         //Second approach
