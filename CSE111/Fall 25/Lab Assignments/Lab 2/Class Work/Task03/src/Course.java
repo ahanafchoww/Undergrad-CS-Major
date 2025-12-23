@@ -1,2 +1,4 @@
-public class Course {
+public class Course
+{
+
 }
