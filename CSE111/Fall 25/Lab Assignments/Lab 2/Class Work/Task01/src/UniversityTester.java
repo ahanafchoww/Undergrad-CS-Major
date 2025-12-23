@@ -25,7 +25,7 @@ public class UniversityTester
         System.out.println (U1.country);
         System.out.println (U2.country);
         // Yes, it has changed - not the same value anymore
-        
+
 
     }
 }
