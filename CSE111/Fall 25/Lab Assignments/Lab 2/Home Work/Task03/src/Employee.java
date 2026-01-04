@@ -12,7 +12,11 @@ public class Employee {
     //displayInfo() - void Method
     //calculateTax() - void Method
     //promoteEmployee(String) - void Method
+    //newEmployee(String) - void method
+
 
     
+
+
 
 }
