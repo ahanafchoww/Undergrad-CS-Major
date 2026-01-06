@@ -14,8 +14,52 @@ public class Employee {
     //promoteEmployee(String) - void Method
     //newEmployee(String) - void method
 
+    public String name;
+    public String des = "junior";
+    public double salary = 30000.0;
+    public double tax = 0.0;
 
-    
+    public void newEmployee(String name){
+        this.name = name;
+    }
+
+    public void displayInfo(){
+        System.out.println ("Employee Name: " + name +"\n" +
+                "Employee Salary: " + salary +" Tk\n" +
+                "Employee Designation: " + des + "\n");
+    }
+
+    public void calculateTax(){
+        if (salary<=30000.0){
+            tax = 0.0;
+            System.out.println("No need to pay tax");
+        }
+        else if (salary>30000.0 && salary<50000.0){
+            tax = salary*(10.0/100.0);
+            System.out.println (name + " Tax Amount: " + tax +  " Tk\n");
+        }
+        else {
+            tax = salary*(30.0/100.0);
+            System.out.println (name + " Tax Amount: " + tax +  " Tk\n");
+        }
+    }
+
+    public  void promoteEmployee(String newDes){
+        this.des = newDes;
+        System.out.println (name + " has been promoted to " + des);
+        if (des.equals("senior")){
+            salary+=25000.0;
+            System.out.println ("New Salary : " + salary);
+        }
+        else if (des.equals("lead")){
+            salary += 50000.0;
+            System.out.println ("New Salary : " + salary);
+        }
+        else if (des.equals("manager")){
+            salary += 75000.0;
+            System.out.println ("New Salary : " + salary);
+        }
+    }
 
 
 
