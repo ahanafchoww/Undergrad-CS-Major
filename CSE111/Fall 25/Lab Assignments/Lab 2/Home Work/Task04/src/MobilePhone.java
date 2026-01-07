@@ -3,5 +3,5 @@ public class MobilePhone {
     //details() - void method
     //addContact(String name, int number) - void method
     //makeCall(int num) - void method
-    
+
 }
