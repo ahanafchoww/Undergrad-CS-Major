@@ -8,6 +8,7 @@ public class MobilePhone {
     public int contactsCount;
     public String[] contacts;
     public int[] numbers;
+    public boolean contactFound = false;
 
     public void setContactCapacity(int cap) {
         this.capacity = cap;
@@ -17,38 +18,38 @@ public class MobilePhone {
 
     public void details() {
         System.out.println("Total Contacts: " + contactsCount);
-        if (contactsCount == 0) {
-            System.out.println("Contact List:");
-        } else if (contactsCount<=capacity){
-            System.out.println("Contacts List:");
-            for (int i = 1; i <= contactsCount; i++) {
-                System.out.println(contacts[i] + ":" + numbers[i]);
-            }
-        }
+        System.out.println("Contact List:");
 
+        for (int i = 0; i < contactsCount; i++) {
+            System.out.println(contacts[i] + ":" + numbers[i]);
+        }
     }
-    public void addContact(String contact, int number){
-        if (contactsCount<capacity){
-            this.contacts[contactsCount+1] = contact;
-            this.numbers[contactsCount+1]= number;
+
+    public void addContact(String contact, int number) {
+        if (contactsCount < capacity) {
+            contacts[contactsCount] = contact;
+            numbers[contactsCount] = number;
             contactsCount++;
-
-        }
-        else {
-            System.out.println ("Storage Full!!");
+            System.out.println("The contact of " + contact + " is added.");
+        } else {
+            System.out.println("Storage Full!!");
         }
     }
 
 
-    public void makeCall(int number){
-        for (int i=0; i<numbers.length;i++){
-            if (number==numbers[i]){
-                System.out.println ("Calling " + contacts[i] + " . . .");
+    public void makeCall(int number) {
+        contactFound = false;
+
+        for (int i = 0; i < contactsCount; i++) {
+            if (number == numbers[i]) {
+                contactFound = true;
+                System.out.println("Calling " + contacts[i] + " . . .");
                 break;
             }
-            else {
-                System.out.println ("Calling " + number + " . . .");
-            }
+        }
+
+        if (!contactFound) {
+            System.out.println("Calling " + number + " . . .");
         }
     }
 }
