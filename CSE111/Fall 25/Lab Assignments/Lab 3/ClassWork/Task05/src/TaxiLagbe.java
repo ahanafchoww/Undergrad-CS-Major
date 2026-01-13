@@ -2,6 +2,7 @@ public class TaxiLagbe {
     public String plateNumber;
     public String location;
     public int passengerCount;
+    public String [] passengerList = new String [4];
 
 
     public TaxiLagbe(String plateNumber, String location){
@@ -15,6 +16,10 @@ public class TaxiLagbe {
     }
 
     public void addPassenger(String passengerName, int fare){
-        
+
+    }
+
+    public void addPassenger(String passengerName, int fare, String passengerName2, int fare2){
+
     }
 }
