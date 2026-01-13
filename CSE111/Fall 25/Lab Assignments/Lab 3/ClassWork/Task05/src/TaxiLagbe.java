@@ -1,6 +1,7 @@
 public class TaxiLagbe {
     public String plateNumber;
     public String location;
+    public int passengerCount;
 
 
     public TaxiLagbe(String plateNumber, String location){
@@ -8,7 +9,12 @@ public class TaxiLagbe {
         this.location = location;
     }
 
-    public TaxiLagbe(String location){
-        this.location = location;
+    public TaxiLagbe(String plateNumber){
+        this.plateNumber = plateNumber;
+        this.location = "Khulna";
+    }
+
+    public void addPassenger(String passengerName, int fare){
+        
     }
 }
