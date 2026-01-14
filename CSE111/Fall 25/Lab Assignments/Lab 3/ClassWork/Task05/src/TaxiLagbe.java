@@ -28,11 +28,10 @@ public class TaxiLagbe {
         } else {
             System.out.println("Taxi Full! No more passengers can be added");
         }
-
     }
 
     public void addPassenger(String passengerName, int fare, String passengerName2, int fare2) {
-        if (passengerCount < 3) {
+        if (passengerCount <= 2) {
             passengerList[passengerCount] = passengerName;
             System.out.println("Dear " + passengerName + "! Welcome to TaxiLagbe");
             passengerCount++;
@@ -49,7 +48,7 @@ public class TaxiLagbe {
 
     public void printDetails() {
         System.out.print("Taxi number: " + plateNumber + "\n" +
-                "This taxi can cover " + location + "\n" +
+                "This taxi can cover " + location + " area" + "\n" +
                 "Total Passenger: " + passengerCount + "\n");
 
         System.out.println("Passenger List:");
@@ -61,6 +60,7 @@ public class TaxiLagbe {
         if (passengerCount!=0){
             System.out.println();
         }
-            System.out.println ("Total Collected fair: " + fareCollected + " Taka");
+        System.out.println("Total collected fare: " + fareCollected + " Taka");
+
     }
 }
