@@ -1,8 +1,9 @@
-public class Tester4{
+public class Tester4 {
     public static void main(String[] args) {
         MoneyTracker tr1 = new MoneyTracker();
         System.out.println(tr1.info());
-        tr1.createTracker("John");     System.out.println("1 ==========");
+        tr1.createTracker("John");
+        System.out.println("1 ==========");
         System.out.println(tr1.info());
         System.out.println("2 ==========");
         tr1.income(1000);
@@ -22,3 +23,4 @@ public class Tester4{
         tr1.showHistory();
         System.out.println("8 ==========");
     }
+}
