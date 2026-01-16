@@ -55,6 +55,7 @@ public class Reader {
 
         for (int i = 0; i < bookCounter; i++) {
             bookList[i] = temp[i];
+            //you can just do - (booklist = temp;) - Line 54 to Line 57
         }
     }
 }
