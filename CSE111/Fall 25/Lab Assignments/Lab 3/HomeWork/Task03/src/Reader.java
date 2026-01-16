@@ -30,7 +30,17 @@ public class Reader {
     }
 
     public void readerInfo(){
-
+        System.out.println("Name: " + name);
+        System.out.println ("Capacity: " + capacity);
+        System.out.println ("Books:");
+        if (bookCounter==0){
+            System.out.println("No books added yet");
+        }
+        else{
+            for (int i = 0; i<bookCounter; i++){
+                System.out.println("Book " + (i+1) + ": " + bookList[i]);
+            }
+        }
     }
 
 
@@ -38,5 +48,16 @@ public class Reader {
     {
         this.capacity = newCapacity;
         System.out.println("Capacity has changed to " + newCapacity);
+        String [] temp = new String [newCapacity];
+
+        for (int i = 0; i<bookCounter; i++){
+            temp [i] = bookList[i];
+        }
+        bookList = new String [newCapacity];
+
+        for (int i = 0; i<bookCounter; i++){
+            bookList [i] = temp[i];
+        }
+
     }
 }
