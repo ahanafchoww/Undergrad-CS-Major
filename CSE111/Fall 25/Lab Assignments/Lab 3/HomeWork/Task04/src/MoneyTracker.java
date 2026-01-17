@@ -1,6 +1,8 @@
 public class MoneyTracker{
     public String name;
     public double balance;
+    public double lastSpent;
+    public double lastAdded;
 
 
     public String info(){
@@ -18,14 +20,25 @@ public class MoneyTracker{
     public void income(int income){
         balance += (income * 1.0);
         System.out.println("Balance Updated");
+        lastAdded = income;
     }
 
     public void expense(int expense){
-        balance -= (expense*1.0);
-        System.out.println("Balance Updated");
+        if (balance>expense) {
+            balance -= (expense * 1.0);
+            System.out.println("Balance Updated");
+            lastSpent = expense;
+        }
+        else if (balance<expense){
+            System.out.println("Not enough balance.");
+        }
+        else {
+            System.out.println("You're broke!");
+        }
     }
 
     public void showHistory(){
-
+        System.out.println ("Last added: " + lastAdded + "\n" +
+                "Last spent: " + lastSpent);
     }
 }
