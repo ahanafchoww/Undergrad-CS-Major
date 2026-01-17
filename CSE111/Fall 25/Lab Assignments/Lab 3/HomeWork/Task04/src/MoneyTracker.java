@@ -24,4 +24,8 @@ public class MoneyTracker{
         balance -= (expense*1.0);
         System.out.println("Balance Updated");
     }
+
+    public void showHistory(){
+
+    }
 }
