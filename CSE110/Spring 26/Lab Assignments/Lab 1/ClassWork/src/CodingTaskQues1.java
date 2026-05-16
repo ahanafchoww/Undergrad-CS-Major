@@ -1,5 +1,5 @@
 public class CodingTaskQues1 {
-    public static void main (String [] args){
+    public static void main(String[] args) {
 
         //(a)
         int hungry;
@@ -45,9 +45,20 @@ public class CodingTaskQues1 {
         // illegal - can not contain special characters other than underscore (_) and $
 
 
-        //
+        //(j)
+        // int 'X';
+        // illegal - can not contain special characters other than underscore (_) and $
 
+
+        //(k)
+        // int public;
+        //illegal - can not use Java Keywords
+
+
+        //(l)
+        int student_id;
 
 
     }
+
 }
