@@ -22,7 +22,30 @@ public class CodingTaskQues1 {
 
         //(e)
         // int "Ans";
-        // illegal -
+        // illegal - can not contain special characters other than underscore (_) and $
+        // also, when the first double quotation mark hits, it starts being taken as String's data value
+
+
+        //(f)
+        String $30;
+
+
+        //(g)
+        // int Yes/No;
+        //illegal - can not contain special characters other than underscore (_) and $
+
+
+        //(h)
+        // int student-id;
+        // illegal - can not contain special characters other than underscore (_) and $
+
+
+        //(i)
+        // double A+3;
+        // illegal - can not contain special characters other than underscore (_) and $
+
+
+        //
 
 
 
