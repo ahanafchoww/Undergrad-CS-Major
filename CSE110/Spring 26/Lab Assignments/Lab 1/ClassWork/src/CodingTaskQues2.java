@@ -17,11 +17,7 @@ public class CodingTaskQues2 {
         int division = vari2 / vari1;
         System.out.println (division);
 
-<<<<<<< HEAD
         //(4)
-=======
-        //(4)y
->>>>>>> a1738b2656b42392e891f0526ca7ccc4391aeb07
         double vari3;
         vari3 = 2;
         System.out.println (vari3);
